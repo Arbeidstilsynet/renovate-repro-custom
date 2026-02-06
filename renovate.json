@@ -11,7 +11,7 @@
         "**/*.[Cc]ontainerfile*"
       ],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>[^\\s]+)(?: versioning=(?<versioning>[^\\s]+))?\\s(?:ENV|ARG) .+?_VERSION=[\"']?(?<currentValue>[^\"'\\s]+)[\"']?"
+        "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>[^\\s]+)(?: versioning=(?<versioning>[^\\s]+))?\\n(?:ENV|ARG) [A-Za-z0-9_]+_VERSION=[\"']?(?<currentValue>[^\"'\\s]+)"
       ]
     }
   ]
