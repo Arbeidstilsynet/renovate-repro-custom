@@ -1,18 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": [
-        "**/[Dd]ockerfile*",
-        "**/[Cc]ontainerfile*",
-        "**/*.[Dd]ockerfile*",
-        "**/*.[Cc]ontainerfile*"
-      ],
-      "matchStrings": [
-        "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>[^\\s]+?)(?: versioning=(?<versioning>[a-z-]+))?\\s(?:ENV|ARG) .+?_VERSION=[\"']?(?<currentValue>[^\"'\\s]+)[\"']?"
-      ]
-    }
-  ]
+  "extends": ["config:recommended", "customManagers:dockerfileVersions"]
 }
